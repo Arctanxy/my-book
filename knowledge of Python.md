@@ -1,4 +1,6 @@
 前面已经介绍了我们选择Python3的理由，这一节中我们将介绍一下Python3的语法知识，作为最容易学习的编程语言，相信经过这一节的讲解，大家对Python编程会有个大致的认识。
+#参考地址：http://www.runoob.com/python/python-variable-types.html
+#http://www.yiibai.com/python/python_variable_types.html
 Python有五个标准的数据类型：
 Numbers（数字）
 String（字符串）
@@ -16,7 +18,12 @@ float（浮点型）
 complex（复数）
 在变量赋值时，Python会根据数值格式自动识别数据类型：
 a = 1
-print(type(a))
+b = 1.0
+c = 0122L
+d = 2j
+print(type(a),type(b),type(c),type(d))
+
+
 多个变量赋值
 
 
