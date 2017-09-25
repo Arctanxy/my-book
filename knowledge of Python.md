@@ -183,6 +183,8 @@ extend()
 > Python中还提供了一种array数组，array中只允许存储同一种类型的，所以运算速度快于list。
 
 推导式：[i*2 for i in range(1,10)]
+推导式是Python中独有的数据生成方式，参考http://www.cnblogs.com/tkqasn/p/5977653.html
+
 
 
 ##（2）字典
