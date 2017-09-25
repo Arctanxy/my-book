@@ -130,12 +130,65 @@ format拼接字符串
 >>> '{0[1]}{1[1]}{1[2]}'.format(l,k)
 '222'
 
-###Python字符串的其他方法
-查找字符串
-分割字符串
-字符串长度
-字符串大小写转换
+###Python字符串的其他功能
 
+遍历字符串
+>>> a = 'a,b,c,d,e,f,g'
+>>> for char in a:
+...     print(char)
+...
+a,b,c,d,e,f,g
+分割字符串
+>>> a = 'abcd-defg-hijk-lmn'
+>>> a.split('-')
+['abcd', 'defg', 'hijk', 'lmn']
+
+字符串长度
+>>> a = 'python'
+>>> len(a)
+6
+字符串大小写转换
+>>> a = 'python'
+>>> a.upper()
+'PYTHON'
+>>> b = 'PYTHON'
+>>> b.lower()
+'python'
+
+
+##列表
+列表（list）是Python中最基本的数据结构之一，以一对方括号中的逗号分隔值的形式出现，如[1,2,3,4,5]。Python中列表最大的特点是其中可以混合存储任意类型的对象：Python中自带的数值、字符串、列表、字典、元组、自定义的类与对象等等。在访问到list中的任意元素时，Python会自动检测该元素的数据类型，所以list比其他编程语言中的数组运算速度更慢。
+list的基本操作
+访问
+切片
+删除
+去重
+拼接
+其他list方法
+mean()
+max()/min()
+sum()
+pop()
+count()
+remove()
+reverse()
+sort()
+insert()
+index()
+extend()
+
+
+
+
+> Python中还提供了一种array数组，array中只允许存储同一种类型的，所以运算速度快于list。
+
+推导式：[i*2 for i in range(1,10)]
+
+
+##（2）字典
+
+
+##（3）元组
 
 
 2. 函数
@@ -146,16 +199,6 @@ format拼接字符串
 
 （2）while
 
-4. 数据类型
 
-
-（1）列表
-
-推导式：[i*2 for i in range(1,10)]
-
-（2）字典
-
-（3）元组
-
-5. 模块、类、对象
+4. 模块、类、对象
 
