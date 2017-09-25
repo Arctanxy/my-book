@@ -203,7 +203,7 @@ append()是最常用的list方法，用于往list中添加元素
 
 
 其他list方法
-> mean()只适用于纯数值列表
+len()
 
 max()/min()
 
@@ -216,7 +216,7 @@ count()
 remove()
 
 reverse()
-
+将列表中的元素反向返回，作用类似于a[::-1]
 sort()
 
 insert()
