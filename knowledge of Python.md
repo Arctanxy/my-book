@@ -28,7 +28,7 @@ Python中无需声明变量类型，系统会自动识别，省去了很多烦�
 
 Python中的数值分为：
 
-Python支持四种不同的数字类型：
+Python支持四种不同的数字类型（Python3中整数只有int类型，没有long类型）：
 
 int（有符号整型）
 
@@ -40,47 +40,50 @@ complex（复数）
 
 在变量赋值时，Python会根据数值格式自动识别数据类型：
 
-a = 1
-
-b = 1.0
-
-c = 0122L
-
-d = 2j
-
-print(type(a),type(b),type(c),type(d))
+>>> a = 1
+>>> b = 1.0
+>>> c = 2j
+>>> print(type(a),type(b),type(c))
+<class 'int'> <class 'float'> <class 'complex'>
 
 多个变量赋值
 
-a = b = c = 1
-
-a,b,c = 1,2,'sring'
+>>> a = b = c = 1
+>>> a,b,c = 1,2,'string'
 
 2. 字符串
 
 Python中的字符串具备一些数组的功能：
 
-a = 'string'
+>>> a = 'string'
 
 读取字母
 
-print(a[1])
+>>> a[1]
+'r'
 
 字符串切片
 
-a[2:4]
+>>> a[2:4]
+'in'
+
+翻转字符串
+>>> p = 'string'
+>>> p[::-1]
+'gnirts'
 
 字符串拼接
 
-b = 'byte'
+>>> b = 'byte'
+>>> a+b
+'sringbyte'
 
-a + b
-
-
-打印时拼接
-
-print('%sa' % 1）
-print('%sa%rb%fc' % (1,1,1))
+使用格式化控制符将字符串格式化
+Python中有两种格式化控制符%和{}
+>>> print('%sa' % 1)
+1a
+>>> print('%sa%rb%fc' % (1,1,1))
+1a1b1.000000c
 
 上例中的%s为类型码，用于指定参数将以何种形式拼接入字符串，Python中的常用类型码如下：
 
@@ -112,10 +115,27 @@ print('%sa%rb%fc' % (1,1,1))
 
 %G    指数(E)或浮点数 (根据显示长度)
 
-格式化字符串
+format拼接字符串
+使用参数位置调用
+>>> '{0}{1}'.format('a',2)#0、1指定参数位置
+'a2'
+>>> '{0}{1}{0}'.format('a',2)
+'a2a'
+也能通过参数名调用
+>>> '{a}{b}'.format(a='c',b='d')
+'cd'
+使用列表下标调用
+>>> l = [1,2,3]
+>>> k = [2,2,2]
+>>> '{0[1]}{1[1]}{1[2]}'.format(l,k)
+'222'
 
-
+###Python字符串的其他方法
 查找字符串
+分割字符串
+字符串长度
+字符串大小写转换
+
 
 
 2. 函数
