@@ -1,6 +1,7 @@
 能够读取pdf的Python库很多，比较著名的有pdfminer和pypdf，下面来对比一下两个库的识别效果：
 我们先从网上找一篇文献：
 # pdfminer
+```
 from cStringIO import StringIO
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -26,8 +27,9 @@ def convert_pdf_2_text(path):
     retstr.close()
 
     return text
-   
+```   
 # pypdf
+```
 from pyPdf import PdfFileWriter, PdfFileReader
 
 output = PdfFileWriter()
@@ -66,7 +68,7 @@ print "document1.pdf has %s pages." % input1.getNumPages()
 outputStream = file("document-output.pdf", "wb")
 output.write(outputStream)
 outputStream.close()
-
+```
 采用这种方法得到的结果并不是很理想，实际处理中还要考虑到pdf中很多的分栏等格式问题，能真实使用的代码比这个要复杂得多。
 
 这里推荐一个曲线救国的办法，可以先使用pdf2htmlex将pdf文件转换成html文件，然后再用我们熟悉的方式来解析html。
