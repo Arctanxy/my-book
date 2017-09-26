@@ -399,6 +399,45 @@ TypeError: 'tuple' object does not support item assignment
 (1, 2, 3)
   
 2. 函数
+函数是指预先设定好能实现一定功能，并且能够重复利用的代码段。
+Python中的函数为function()形式，上一节中讲到的这种类型的代码如max(),min(),print()等都是函数。
+函数包括三大要素，函数名、参数列表、返回对象。以上一节中求元组中最大值的函数max(t1)为例：
+函数名为max
+参数为元组t1
+返回对象为元组t1中的最大元素3
+这一节中将主要介绍如何调用函数与如何自定义函数。
+函数调用
+调用函数只需使用函数名及参数即可。
+
+必备参数
+
+默认参数
+
+
+自定义函数
+假设有函数如下：
+>>> def func(a,b=1,c=False):
+...     if c == False:
+...             return a*b
+...     else:
+...             return a+1
+...
+必备参数
+在这个函数中，a为必备参数，如果调用func()不提供a参数，函数会出现报错：
+>>> func(1)
+1
+
+>>> func(1,b=2)
+2
+>>> func(1,c=True)
+2
+
+
+自定义匿名函数
+
+全局变量与局部变量
+
+
 
 3. 循环
 
@@ -409,3 +448,6 @@ TypeError: 'tuple' object does not support item assignment
 
 4. 模块、类、对象
 
+
+5. Python代码书写规范
+http://www.cnblogs.com/wangcp-2014/p/4608265.html
